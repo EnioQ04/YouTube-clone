@@ -1,0 +1,147 @@
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+@media (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 751px) and (max-width:999px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }  
+}
+
+@media (min-width: 1000px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .video-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .video-author,
+  .video-stats,
+  .video-time {
+  font-size: 14px;
+}
+}
+
+
+.thumbnail {
+  width: 100%; 
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-title {
+  display: block;
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.video-author,
+.video-stats {
+  color: rgb(96, 96, 96);
+  font-size: 12px;
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+
+.profile-picture {
+  width: 36px;
+  border-radius: 18px;
+}
+
+.video-time {
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.extra-channel-picture {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  height: 36px;
+}
+
+.extra-channel-picture .channel-tooltip {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  bottom: -68px;
+
+  background-color: white;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+
+.channel-picture-tooltip {
+  height: 45px;
+}
+
+.extra-channel-picture:hover .channel-tooltip {
+  opacity: 0.95;
+}
+
+.profile-picture-tooltip {
+  width: 45px;
+  border-radius: 50px;
+}
+
+.info-tooltip {
+  margin-left: 8px;
+  line-height: 20px;
+}
+
+.author-tooltip {
+  font-weight: 700;
+  font-size: 14px;
+  white-space:nowrap ;
+}
+
+.subscribers-tooltip {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(96, 96, 96);
+}
